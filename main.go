@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
+	"strings"
 )
 
 func main() {
@@ -12,14 +12,9 @@ func main() {
 	w := bufio.NewWriter(os.Stdout)
 	defer w.Flush()
 
-	var input int
+	var input string
 
 	fmt.Fscan(r, &input)
 
-	var castedInput string
-	castedInput = strconv.Itoa(input)
-
-	fmt.Fprintln(w, castedInput)
-
-	//fmt.Println("Hello, World!")
+	fmt.Fprintln(w, strings.Count(input, "1"))
 }
