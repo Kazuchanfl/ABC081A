@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strconv"
 )
 
 func main() {
@@ -14,5 +15,11 @@ func main() {
 	var input int
 
 	fmt.Fscan(r, &input)
-	fmt.Println("Hello, World!")
+
+	var castedInput string
+	castedInput = strconv.Itoa(input)
+
+	fmt.Fprintln(w, castedInput)
+
+	//fmt.Println("Hello, World!")
 }
