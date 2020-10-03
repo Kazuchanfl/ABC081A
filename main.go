@@ -11,8 +11,8 @@ func main() {
 	w := bufio.NewWriter(os.Stdout)
 	defer w.Flush()
 
-	var a, b int
+	var input int
 
-	fmt.Fscan(r, &a, &b)
+	fmt.Fscan(r, &input)
 	fmt.Println("Hello, World!")
 }
